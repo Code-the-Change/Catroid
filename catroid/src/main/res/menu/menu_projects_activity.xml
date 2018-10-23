@@ -47,5 +47,9 @@
         android:icon="@drawable/ic_cast_white"
         android:visible="false"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/merge"
+        android:title="@string/merge"
+        app:showAsAction="never" />
 
 </menu>

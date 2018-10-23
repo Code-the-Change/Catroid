@@ -264,7 +264,8 @@ public class ProjectListFragment extends RecyclerViewFragment<ProjectData> imple
 				getString(R.string.delete),
 				getString(R.string.rename),
 				getString(R.string.show_details),
-				getString(R.string.upload_button)
+				getString(R.string.upload_button),
+				getString(R.string.merge)
 		};
 		new AlertDialog.Builder(getActivity())
 				.setTitle(item.projectName)
@@ -296,6 +297,8 @@ public class ProjectListFragment extends RecyclerViewFragment<ProjectData> imple
 										.putExtra(ProjectUploadActivity.PROJECT_NAME, item.getName());
 								startActivity(intent);
 								break;
+							case 5:
+								ToastUtil.showError(getActivity(), R.string.error_merge_not_implemented);
 							default:
 								dialog.dismiss();
 						}
